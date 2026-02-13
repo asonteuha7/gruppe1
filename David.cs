@@ -10,13 +10,13 @@ class David{
         if(args.Length != 1) return false;
         try{
             StreamReader reader = new StreamReader(args[0]);
-            string line = reader.ReadLine();
+            string? line = reader.ReadLine();
             while(line != null){
                 Console.WriteLine(line);
                 line = reader.ReadLine();
             }
         }
-        catch(Exception ex){
+        catch{
             return false;
         }
         return true;
