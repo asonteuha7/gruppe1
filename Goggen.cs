@@ -1,8 +1,9 @@
 
 public class Goggen
 {
-    public static bool func(string[] args)
+    public static bool PWD(string[] args)
     {
-        return true; //placeholder
+        Console.WriteLine(Directory.GetCurrentDirectory());
+        return false; //placeholder
     }
 }
