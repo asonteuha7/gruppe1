@@ -16,7 +16,8 @@ class App{
         {
             new ProgramPointer("pwd", Goggen.PWD),
             new ProgramPointer("help", David.help),
-            new ProgramPointer("echo", Goggen.Echo)
+            new ProgramPointer("echo", Goggen.Echo),
+            new ProgramPointer("cat", David.cat)
         };
     public static void Main(string[] args){
         if(args.Length == 0) return;
