@@ -15,7 +15,8 @@ class App{
     private static List<ProgramPointer> m_list_of_programs = new List<ProgramPointer>
         {
             new ProgramPointer("pwd", Goggen.PWD),
-            new ProgramPointer("help", David.help)
+            new ProgramPointer("help", David.help),
+            new ProgramPointer("echo", Goggen.Echo)
         };
     public static void Main(string[] args){
         if(args.Length == 0) return;
