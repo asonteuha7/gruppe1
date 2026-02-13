@@ -15,7 +15,7 @@ class App{
         };
     public static void Main(string[] args){
         if(args.Length == 0) return;
-        string program = args[0];
+        string program = args[0].ToLower().Trim();
         string[] program_args = new string[args.Length - 1];
         for(int i = 1; i < args.Length; ++i){
             program_args[i] = args[i];
