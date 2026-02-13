@@ -6,13 +6,10 @@ public class Goggen
         Console.WriteLine(Directory.GetCurrentDirectory());
         return false; 
     }
-
     public static bool Echo(string[] args)
     {
-        string? input = Console.ReadLine();
-        string[] text = input!.Split(' ');
-        string message = string.Join(" ", text[1..]);
-        Console.WriteLine(message);
+        Console.WriteLine(string.Join(" ", args));
         return false;
     }  
+
 }
