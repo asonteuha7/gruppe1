@@ -1,6 +1,10 @@
 ﻿class ProgramPointer{
-    public string m_program_name;
-    public Func<string[], bool> m_fptr;
+    public string m_program_name{get; private init;}
+    public Func<string[], bool> m_fptr{get; private init;}
+    public bool call(string[] args){
+        if(m_fptr == null) throw new Exception("fptr not loaded");
+        return m_fptr(args);
+    }
     public ProgramPointer(string program_name, Func<string[], bool> fptr){
         m_program_name = program_name;
         m_fptr = fptr;
@@ -28,10 +32,10 @@ class App{
         if(ptr == null) return;
         bool status;
         if(ptr.m_program_name == "help"){
-            status = ptr.m_fptr(all_programs);
+            status = ptr.call(all_programs);
         }
         else{
-            status = ptr.m_fptr(program_args);
+            status = ptr.call(program_args);
         }
     }
 }
