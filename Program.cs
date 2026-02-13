@@ -27,7 +27,7 @@ class App{
             all_programs[i] = m_list_of_programs[i].m_program_name;
         }
         for(int i = 1; i < args.Length; ++i){
-            program_args[i] = args[i];
+            program_args[i-1] = args[i];
         }
         var ptr = m_list_of_programs.Find(x => x.m_program_name == program);
         if(ptr == null) return;
