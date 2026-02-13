@@ -10,7 +10,7 @@
 class App{
     private static List<ProgramPointer> m_list_of_programs = new List<ProgramPointer>
         {
-            new ProgramPointer("func", Goggen.func),
+            new ProgramPointer("pwd", Goggen.PWD),
             new ProgramPointer("help", David.help)
         };
     public static void Main(string[] args){
@@ -22,6 +22,6 @@ class App{
         }
         var ptr = m_list_of_programs.Find(x => x.m_program_name == program);
         if(ptr == null) return;
-       ptr.m_fptr(program_args);
+        var status = ptr.m_fptr(program_args);
     }
 }
