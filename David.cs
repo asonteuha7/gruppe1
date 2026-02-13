@@ -7,7 +7,7 @@ class David{
         return true;
     }
     public static bool cat(string[] args){
-
+        return false;
 
     }
 }

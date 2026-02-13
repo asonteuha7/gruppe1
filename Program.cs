@@ -1,6 +1,6 @@
 ﻿class ProgramPointer{
     public string m_program_name{get; private init;}
-    public Func<string[], bool> m_fptr{private get; private init;}
+    public Func<string[], bool> m_fptr{get; private init;}
     public bool call(string[] args){
         if(m_fptr == null) throw new Exception("fptr not loaded");
         return m_fptr(args);
